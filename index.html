@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Orunsolu - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        header > * {
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.4em;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #ffd700;
+        }
+        .contact i {
+            margin-right: 5px;
+        }
+        button {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1em;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        details {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        details:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        summary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        summary::marker {
+            display: none;
+        }
+        summary::after {
+            content: '+';
+            font-size: 1.5em;
+            margin-left: auto;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+        summary:hover {
+            background: linear-gradient(135deg, #e91e63, #f06292);
+        }
+        .content {
+            padding: 20px;
+            background-color: #fafafa;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: '🔹';
+            position: absolute;
+            left: 0;
+            color: #4facfe;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .job-title, .cert {
+            font-weight: 700;
+            color: #333;
+        }
+        .company, .date {
+            color: #666;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            .subtitle {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MOHAMMED ORUNSOLU</h1>
+            <div class="subtitle">CYBERSECURITY PROFESSIONAL</div>
+            <div class="subtitle">Security Operations | Penetration Testing | Vulnerability Assessment</div>
+            <div class="contact">
+                <i class="fas fa-envelope"></i> <a href="mailto:mohammedorunsolu@gmail.com">mohammedorunsolu@gmail.com</a> |
+                <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mohammedorunsolu/" target="_blank">linkedin.com/in/mohammedorunsolu/</a> |
+                <i class="fab fa-github"></i> <a href="https://github.com/MDPorsch" target="_blank">github.com/MDPorsch</a><br>
+                <i class="fas fa-map-marker-alt"></i> Ibadan, Oyo Nigeria
+            </div>
+            <button onclick="window.print()"><i class="fas fa-print"></i> Print CV</button>
+        </header>
+
+        <details>
+            <summary><i class="fas fa-bullseye"></i> OBJECTIVE STATEMENT</summary>
+            <div class="content">
+                <p>Cybersecurity professional with hands-on expertise in security operations, vulnerability assessment, and penetration testing, driven by a passion for breaking things to make them stronger. I build, test, and automate, from deploying integrated SOC stacks to executing full-stack penetration tests in my home lab. I thrive at the intersection of offensive and defensive security, and I am actively seeking an opportunity to bring this hands-on mindset to a forward-thinking team where I can contribute from day one and grow into an elite security professional.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-tools"></i> CORE SKILLS & COMPETENCIES</summary>
+            <div class="content">
+                <ul>
+                    <li>Vulnerability Assessment, Penetration Testing & Ethical Hacking</li>
+                    <li>Security Operations (SOC, SIEM, Incident Detection & Response)</li>
+                    <li>Network Security & Traffic Analysis (Suricata, IDS/IPS)</li>
+                    <li>Web Application & Offensive Security (Metasploit, Burp Suite, SQL Injection, XSS)</li>
+                    <li>Cloud Security & Identity & Access Management (IAM)</li>
+                    <li>Scripting, Automation & OS Proficiency (Bash, Linux, Windows)</li>
+                    <li>Firewall Configuration, SSH Hardening & Risk Management</li>
+                </ul>
+                <p><strong>PROFESSIONAL ATTRIBUTES:</strong> Problem Solving, Discretion in Confidential Matters, Communication, Reliability, Cross-Functional Collaboration, Adaptability, Continuous Learning.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-flask"></i> HOME LAB & PRACTICAL EXPERIENCE</summary>
+            <div class="content">
+                <ul>
+                    <li>Built and deployed a fully integrated SOC STACK (Wazuh, Suricata, VirusTotal) with automated threat detection, real-time alerting and active response scripting</li>
+                    <li>Conducted EXPLOIT-DRIVEN VULNERABILITY ASSESSMENTS on Metasploitable & DevGuru, and performed a full-stack penetration test on VulnBank.org covering reconnaissance, business logic and API exploitation</li>
+                    <li>Demonstrated POST-EXPLOITATION TECHNIQUES including PostgreSQL reverse shell, C2 session pivoting, lateral movement, SSH exploitation and Metasploit attack & defence simulation</li>
+                    <li>Executed WEB APPLICATION ATTACKS covering SQL injection, XSS, session hijacking and brute force in hands-on lab environments</li>
+                    <li>Performed NETWORK ENUMERATION & STEALTH ANALYSIS focused on detection thresholds and vulnerability discovery</li>
+                    <li>Built an AUTOMATED SECURITY MONITORING TOOLKIT using Bash scripting and configured SSH hardening & firewall rules</li>
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-briefcase"></i> WORK EXPERIENCE</summary>
+            <div class="content">
+                <div class="experience-item">
+                    <div class="job-title">Information Security Lead</div>
+                    <div class="company">Verixar Ltd. London, UK | Present</div>
+                    <p>Built and implemented the company's information security programme from the ground up in a seed-stage InsurTech startup operating in the customer data verification and fraud prevention space.</p>
+                    <p><strong>Key responsibilities and achievements:</strong></p>
+                    <ul>
+                        <li>Designed and authored the company's full security documentation suite including the Information Security Policy, Cyber Incident Response Plan, Business Continuity and Disaster Recovery Plan, and Cyber Security Risk Register</li>
+                        <li>Conducted a comprehensive vendor due diligence response addressing Oakley Capital's IT security, data protection, and AI governance questionnaires across 54 individual requirements</li>
+                        <li>Leading the company's NCSC Cyber Essentials certification programme — mapping controls across firewalls, secure configuration, access control, malware protection, and patch management</li>
+                        <li>Implemented MFA across all company accounts and platforms including GitHub, Vercel, Railway, Namecheap, and Private Email for all four team members</li>
+                        <li>Established device security standards across a BYOD environment covering full disk encryption, screen lock policies, and DNS-level malware filtering via Cloudflare</li>
+                        <li>Produced and delivered the company's first security awareness training session to all staff covering phishing recognition, password hygiene, and incident reporting</li>
+                        <li>Created a Vendor Security Questionnaire and onboarding framework to assess third-party suppliers before granting system access</li>
+                        <li>Developed a Cyber Essentials Evidence Log tracking all implemented controls across the five certification areas with supporting documentation and proof</li>
+                        <li>Advised the founding team on GDPR obligations as a B2B data processor for regulated insurance clients, including data flow mapping and sub-processor management</li>
+                    </ul>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-graduation-cap"></i> EDUCATION AND CERTIFICATIONS</summary>
+            <div class="content">
+                <div class="education-item">
+                    <div class="cert">TS Academy | Cybersecurity Program</div>
+                    <div class="date">Nov 2025 — April 2026</div>
+                    <p>Intensive program covering network security, ethical hacking, digital forensics, and security operations through hands-on labs and real-world simulations</p>
+                    <p>Certificate of Completion Issued 2026</p>
+                </div>
+                <div class="education-item">
+                    <div class="cert">GoMyCode | Cybersecurity Bootcamp — CompTIA Security+ 701</div>
+                    <div class="date">Dec 2025 — Feb 2026</div>
+                    <p>Covered foundations of IT for cybersecurity, general security concepts, threats, vulnerabilities and mitigations, security architecture, security operations, and security program management and oversight</p>
+                    <p>Certificate of Completion Issued 2026</p>
+                </div>
+                <div class="education-item">
+                    <div class="cert">Coursera | Google Professional Cybersecurity Certificate</div>
+                    <div class="date">2025</div>
+                    <p>Completed 9-course professional program covering foundations of cybersecurity, risk management, network security, Linux & SQL, threat & vulnerability analysis, detection & response, Python automation, and cybersecurity job readiness</p>
+                </div>
+                <div class="education-item">
+                    <div class="cert">Amazon Web Services (AWS) | Cloud Practitioner Essentials</div>
+                    <div class="date">2026</div>
+                </div>
+                <div class="education-item">
+                    <div class="cert">CompTIA | Security+ (SY0-701)</div>
+                    <div class="date">In View</div>
+                </div>
+                <div class="education-item">
+                    <div class="cert">Federal University of Technology Akure (FUTA) | B.Tech</div>
+                    <div class="date">Graduated 2023</div>
+                </div>
+            </div>
+        </details>
+    </div>
+</body>
+</html>

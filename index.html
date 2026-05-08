@@ -347,7 +347,7 @@
                 <i class="fab fa-github"></i> <a href="https://github.com/MDPorsch" target="_blank">github.com/MDPorsch</a><br>
                 <i class="fas fa-map-marker-alt"></i> Ibadan, Oyo Nigeria
             </div>
-            <button onclick="window.print()"><i class="fas fa-print"></i> Print CV</button>
+            <button onclick="downloadCV()"><i class="fas fa-print"></i> Download CV</button>
         </header>
 
         <div class="skills-section">
@@ -504,7 +504,7 @@
                 </div>
                 <div class="education-item">
                     <div class="cert">CompTIA | Security+ (SY0-701)</div>
-                    <div class="date">In View</div>
+                    <div class="date">Passed: 803/900</div>
                 </div>
                 <div class="education-item">
                     <div class="cert">Federal University of Technology Akure (FUTA) | B.Tech</div>
@@ -523,6 +523,15 @@
             } else {
                 container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             }
+        }
+
+        function downloadCV() {
+            const link = document.createElement('a');
+            link.href = 'MOHAMMED ORUNSOLU CyberSecurity CV.pdf';
+            link.download = 'MOHAMMED ORUNSOLU CyberSecurity CV.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
